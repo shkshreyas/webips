@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla | Electric Revolution</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Arial',sans-serif}
+        .n{position:fixed;top:0;width:100%;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.95);z-index:1000;backdrop-filter:blur(10px)}
+        .l svg{height:30px;fill:#333}
+        .nl{display:flex;gap:30px}
+        .nl a{text-decoration:none;color:#333;font-weight:500;transition:.3s}
+        .nl a:hover{color:#007bff}
+        .h{height:100vh;position:relative;overflow:hidden}
+        .h video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+        .hc{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;padding:0 20px;background:rgba(0,0,0,.3)}
+        .h h1{font-size:4rem;margin-bottom:20px;opacity:0;transform:translateY(30px)}
+        .h p{font-size:1.5rem;margin-bottom:30px;opacity:0;transform:translateY(30px)}
+        .b{padding:15px 40px;border:none;background:#007bff;color:#fff;border-radius:25px;font-size:1.1rem;cursor:pointer;transition:.3s;opacity:0;transform:translateY(30px)}
+        .b:hover{background:#0056b3;transform:scale(1.05)}
+        .m{padding:100px 20px;background:#f8f9fa}
+        .mc{margin:50px auto;max-width:1200px;display:flex;align-items:center;gap:50px;opacity:0;transform:translateX(-50px)}
+        .mc:nth-child(even){flex-direction:row-reverse;transform:translateX(50px)}
+        .mi{flex:1;height:400px;background:#ddd;border-radius:10px;overflow:hidden}
+        .mi img{width:100%;height:100%;object-fit:cover}
+        .mt{flex:1}
+        .mt h2{font-size:2.5rem;margin-bottom:20px}
+        .mt p{font-size:1.1rem;line-height:1.6;color:#666;margin-bottom:30px}
+        .nw{padding:100px 20px}
+        .ng{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1200px;margin:0 auto}
+        .nc{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);opacity:0;transform:translateY(30px);cursor:pointer}
+        .ni{height:200px;overflow:hidden}
+        .ni img{width:100%;height:100%;object-fit:cover;transition:.3s}
+        .nc:hover .ni img{transform:scale(1.1)}
+        .nt{padding:20px}
+        .nt h3{font-size:1.3rem;margin-bottom:10px}
+        .nt p{color:#666;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+        .c{padding:100px 20px;background:#f8f9fa}
+        .cc{max-width:800px;margin:0 auto}
+        .f{display:grid;gap:20px}
+        .fg{display:flex;flex-direction:column;gap:5px}
+        .fg label{font-weight:500;color:#333}
+        .fg input,.fg textarea{padding:10px;border:1px solid #ddd;border-radius:5px;font-size:1rem}
+        .fg textarea{height:150px;resize:vertical}
+        .ft{background:#333;color:#fff;padding:50px 20px}
+        .fc{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px}
+        .fs h3{margin-bottom:20px}
+        .fs ul{list-style:none}
+        .fs li{margin-bottom:10px}
+        .fs a{color:#ddd;text-decoration:none;transition:.3s}
+        .fs a:hover{color:#fff}
+        .md{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:1001}
+        .mx{position:relative;background:#fff;margin:5% auto;padding:40px;max-width:800px;max-height:80vh;overflow-y:auto;border-radius:10px}
+        .cl{position:absolute;right:20px;top:20px;font-size:24px;cursor:pointer}
+    </style>
+</head>
+<body>
+    <nav class="n">
+        <div class="l">
+            <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h24v27.6h6.7V7h24.1V0H85.3z"/>
+            </svg>
+        </div>
+        <div class="nl">
+            <a href="#m">Models</a>
+            <a href="#nw">News</a>
+            <a href="investor.html">Investors</a>
+            <a href="#c">Contact</a>
+        </div>
+    </nav>
+
+    <section class="h">
+        <video autoplay muted loop>
+            <source src="videoplayback.mp4" type="video/mp4">
+        </video>
+        <div class="hc">
+            <h1>The Future is Electric</h1>
+            <p>Experience unprecedented performance</p>
+            <button class="b">Explore Models</button>
+        </div>
+    </section>
+
+    <section class="m" id="m">
+        <div class="mc">
+            <div class="mi">
+                <img src="https://www.motortrend.com/uploads/2024/01/1-2024-Tesla-Model-S-front-view.jpg?w=640&width=640&q=75&format=webp" alt="Model S">
+            </div>
+            <div class="mt">
+                <h2>Model S</h2>
+                <p>Range up to 400 miles, 0-60 mph in 2.3s</p>
+                <button class="b">Learn More</button>
+            </div>
+        </div>
+
+        <div class="mc">
+            <div class="mi">
+                <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Tesla/Cybertruck/7236/1574859399554/front-left-side-47.jpg?tr=w-664" alt="Cybertruck">
+            </div>
+            <div class="mt">
+                <h2>Cybertruck</h2>
+                <p>Revolutionary design, exceptional performance</p>
+                <button class="b">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="nw" id="nw">
+        <div class="ng">
+            <div class="nc">
+                <div class="ni">
+                    <img src="https://www.investopedia.com/thmb/I0Clxhly7ySxXFAyGFQ2N2uehFs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-2192202283-8e5a4c930746403db143611414e4c6d6.jpg" alt="News 1">
+                </div>
+                <div class="nt">
+                    <h3>Tesla Stock Rises on AI Prospects</h3>
+                    <p>Tesla shares climb as investors recognize AI potential in automotive sector.</p>
+                </div>
+            </div>
+
+            <div class="nc">
+                <div class="ni">
+                    <img src="https://helios-i.mashable.com/imagery/articles/07iADlMwbpKbdiyZ6UdkH8S/hero-image.fill.size_1248x702.v1735769709.jpg" alt="News 2">
+                </div>
+                <div class="nt">
+                    <h3>Cybertruck Production Ramps Up</h3>
+                    <p>Tesla increases Cybertruck production to meet growing demand.</p>
+                </div>
+            </div>
+
+            <div class="nc">
+                <div class="ni">
+                    <img src="https://carnewschina.com/wp-content/uploads/2024/12/teslashanghai.jpg" alt="News 3">
+                </div>
+                <div class="nt">
+                    <h3>New Gigafactory Announced</h3>
+                    <p>Tesla reveals plans for new Gigafactory location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="md">
+        <div class="mx">
+            <span class="cl">&times;</span>
+            <h2 id="mt"></h2>
+            <p id="mp"></p>
+        </div>
+    </div>
+
+    <section class="c" id="c">
+        <div class="cc">
+            <h2>Contact</h2>
+            <form class="f">
+                <div class="fg">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="fg">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="fg">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button class="b" style="background: linear-gradient(45deg, rgb(0, 128, 255), rgb(0, 255, 128)); color: white; border: none; padding: 10px 15px; border-radius: 5px; font-size: 16px; cursor: pointer;">Send</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <footer class="ft">
+        <div class="fc">
+            <div class="fs">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Invest</a></li>
+                </ul>
+            </div>
+            <div class="fs">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Charging</a></li>
+                </ul>
+            </div>
+            <div class="fs">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.to('.h h1,.h p,.h .b',{opacity:1,y:0,duration:1,stagger:.2});
+        
+        gsap.utils.toArray('.mc').forEach(c=>{
+            gsap.to(c,{
+                scrollTrigger:{trigger:c,start:'top center+=100',toggleActions:'play none none reverse'},
+                opacity:1,x:0,duration:1
+            });
+        });
+        
+        gsap.utils.toArray('.nc').forEach((c,i)=>{
+            gsap.to(c,{
+                scrollTrigger:{trigger:c,start:'top center+=100'},
+                opacity:1,y:0,duration:.8,delay:i*.2
+            });
+        });
+
+        const m=document.querySelector('.md');
+        const c=document.querySelectorAll('.nc');
+        
+        c.forEach(card=>{
+            card.addEventListener('click',()=>{
+                const t=card.querySelector('h3').textContent;
+                const p=card.querySelector('p').textContent;
+                document.getElementById('mt').textContent=t;
+                document.getElementById('mp').textContent=p;
+                m.style.display='block';
+                document.body.style.overflow='hidden';
+            });
+        });
+        
+        document.querySelector('.cl').onclick=()=>{
+            m.style.display='none';
+            document.body.style.overflow='auto';
+        };
+        
+        window.onclick=e=>{
+            if(e.target===m){
+                m.style.display='none';
+                document.body.style.overflow='auto';
+            }
+        };
+    </script>
+</body>
+</html>

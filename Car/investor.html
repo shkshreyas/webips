@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla | Investor Relations</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo svg {
+            height: 30px;
+            fill: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 60vh;
+            color: #fff;
+        }
+        .hero .hero-txt {
+            padding: 2rem;
+            background: linear-gradient(45deg, #007bff, #00ff88);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .vid-pres {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .vid-pres video {
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .inv-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2rem;
+            background: #fff;
+        }
+        .stat-card {
+            width: 200px;
+            text-align: center;
+            margin: 1rem;
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .stat-num {
+            font-size: 2rem;
+            color: #007bff;
+        }
+        .mdl {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2rem;
+        }
+        .chart {
+            width: 90%;
+            max-width: 400px;
+            margin: 1rem;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .stat-card {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h24v27.6h6.7V7h24.1V0H85.3z"/>
+            </svg>
+        </div>
+        <div class="nav-links">
+            <a href="#models">Models</a>
+            <a href="#news">News</a>
+            <a href="investor.html">Investors</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-txt">
+            <h1>Investor Relations</h1>
+            <p>Building a sustainable future through innovation and excellence</p>
+        </div>
+    </section>
+    <section class="vid-pres">
+        <video src="shareholder.mp4" controls autoplay></video>
+    </section>
+    <section class="inv-stats">
+        <div class="stat-card">
+            <div class="stat-num">$842B</div>
+            <p>Market Cap</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-num">$24.32</div>
+            <p>Revenue Growth YoY</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-num">2.8M</div>
+            <p>Vehicles Delivered</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-num">31%</div>
+            <p>Gross Margin</p>
+        </div>
+    </section>
+    <section class="mdl">
+        <div class="chart"><canvas id="stockC"></canvas></div>
+        <div class="chart"><canvas id="deliveryC"></canvas></div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Volta</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Vehicle Support</a></li>
+                    <li><a href="#">Charging</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const sCtx = document.getElementById('stockC').getContext('2d');
+        new Chart(sCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{ label: 'Stock Price', data: [220, 238, 252, 242, 260, 255], borderColor: '#007bff', tension: 0.4 }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+        const dCtx = document.getElementById('deliveryC').getContext('2d');
+        new Chart(dCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                datasets: [{ label: 'Deliveries', data: [422, 466, 435, 484], backgroundColor: '#00ff88' }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.stat-card').forEach((c, i) => {
+            gsap.from(c, { scrollTrigger: { trigger: c, start: 'top center+=100' }, opacity: 0, y: 50, duration: 0.8, delay: i * 0.2 });
+        });
+    </script>
+</body>
+</html>
