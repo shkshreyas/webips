@@ -45,9 +45,9 @@ The repository is structured as follows:
   A visually appealing and interactive website for car enthusiasts or dealerships, featuring:  
   An extensive catalog of cars with images, prices, and specifications.
 
-<div style="display: flex; justify-content: space-between;">
-  <img src="./Car/s1.png" alt="Car 1" style="width: 50%; height: auto;"/>
-  <img src="./Car/s2.png" alt="Car 2" style="width: 50%; height: auto;"/>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="./Car/s1.png" alt="Car Image 1" style="width: 48%; height: auto;">
+  <img src="./Car/s2.png" alt="Car Image 2" style="width: 48%; height: auto;">
 </div>
 
 
@@ -57,11 +57,10 @@ The repository is structured as follows:
 - **Description:**  
   A delightful and engaging website designed for a play school to attract and inform parents,
 
-<div style="display: flex; justify-content: space-between;">
-  <img src="./PlaySchool/s1.png" alt="Car 1" style="width: 50%; height: auto;"/>
-  <img src="./PlaySchool/s2.png" alt="Car 2" style="width: 50%; height: auto;"/>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="./PlaySchool/s1.png" alt="Car Image 1" style="width: 48%; height: auto;">
+  <img src="./PlaySchool/s2.png" alt="Car Image 2" style="width: 48%; height: auto;">
 </div>
-
 
 
 ---
