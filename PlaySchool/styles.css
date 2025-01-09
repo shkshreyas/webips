@@ -4,10 +4,41 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
-
+html, body {
+    height: 100%;
+}
 body {
     background-color: #E0F7FA;
     color: #444;
+	display: flex;
+	flex-direction: column;
+}
+
+h1, h2 {
+    font-family: 'Permanent Marker', cursive;
+    text-decoration: underline;
+    color: #00796B;
+}
+
+.act {
+    font-family: 'Lobster', cursive;
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    color: #FF5722;
+    transition: transform 0.2s;
+}
+
+.act:hover {
+    text-decoration: none; 
+    color: #4CAF50;
+}
+
+.fs {
+    font-family: 'Lobster', cursive;
+}
+
+.cpy {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .bar {
@@ -25,7 +56,6 @@ body {
 }
 
 .l {
-    height: auto;
     width: 70px;
     border-radius: 50%;
     display: flex;
@@ -57,6 +87,7 @@ body {
 .c {
     padding-top: 80px;
     padding-bottom: 60px;
+	flex: 1;
 }
 
 .hero {
@@ -74,24 +105,24 @@ body {
     font-size: 1.2em;
 }
 
-.video-section {
+.vd-sec {
     text-align: center;
     margin: 30px 0;
 }
 
-.video-section video {
+.vd-sec video {
     width: 80%;
     border-radius: 10px;
 }
 
-.interactive-section {
+.int-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px 0;
 }
 
-.activity {
+.act {
     background: #FFD54F;
     padding: 20px;
     border-radius: 10px;
@@ -101,32 +132,32 @@ body {
     transition: background 0.3s;
 }
 
-.activity:hover {
+.act:hover {
     background: #FFCA28;
 }
 
-.gallery {
+.gal {
     text-align: center;
 }
 
-.gallery h2 {
+.gal h2 {
     margin-bottom: 20px;
 }
 
-.images {
+.imgs {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.images img {
+.imgs img {
     width: 200px;
     height: auto;
     margin: 10px;
     border-radius: 10px;
 }
 
-.testimonials {
+.test {
     background: #FFF59D;
     padding: 20px;
     margin: 20px 0;
@@ -134,20 +165,20 @@ body {
     border-radius: 10px;
 }
 
-.testimonials blockquote {
+.test blockquote {
     margin: 10px 0;
     font-style: italic;
     color: #616161;
 }
 
-.fun-facts, .events {
+.ff, .ev {
     padding: 20px;
     margin: 20px 0;
     background: #E6EE9C;
     border-radius: 10px;
 }
 
-.events ul, .fun-facts ul {
+.ev ul, .ff ul {
     list-style-type: none;
 }
 
@@ -157,8 +188,8 @@ body {
     padding: 20px;
     text-align: center;
     position: relative;
+	margin-top: auto;
 }
-
 .fc {
     display: flex;
     justify-content: space-between;
@@ -184,11 +215,98 @@ body {
     text-decoration: none;
 }
 
-.copyright {
+.cpy {
     margin-top: 15px;
     font-size: 0.8em;
 }
 
-.copyright p {
+.cpy p {
     margin: 0;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu a {
+    margin: 10px 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .n {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .n1 {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+.info {
+    margin-bottom: 20px; 
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+.social-icons {
+    margin-top: 15px;
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #f0f0f0;
 }

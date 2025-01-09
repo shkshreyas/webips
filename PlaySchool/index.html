@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Child FUN - Where Learning is Play</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -15,11 +15,16 @@
                 <div class="l">
                     <img src="logo.jpg" alt="Logo">
                 </div>
+                <button class="hamburger" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
                 <div class="n1">
-                    <a href="#">Home</a>
-                    <a href="#">Admission</a>
+                    <a href="index.html">Home</a>
+                    <a href="addmission.html">Admission</a>
                     <a href="#">Investors</a>
-                    <a href="#">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </nav>
         </section>
@@ -31,7 +36,7 @@
             <p>Learning through play is our motto! Join us for a fun-filled educational experience!</p>
         </section>
 
-        <section class="video-section">
+        <section class="vd-sec">
             <h2>Watch Our Introduction</h2>
             <video controls autoplay muted>
                 <source src="demo.mp4" type="video/mp4">
@@ -39,16 +44,16 @@
             </video>
         </section>
 
-        <section class="interactive-section">
+        <section class="int-sec">
             <h2>Fun Activities!</h2>
-            <div class="activity" id="activity1">🎨 Art Corner</div>
-            <div class="activity" id="activity2">📚 Story Time</div>
-            <div class="activity" id="activity3">🎉 Play Area</div>
+            <div class="act" id="activity1"><a href="art-corner.html">🎨 Art Corner</a></div>
+            <div class="act" id="activity2"><a href="story-time.html">📚 Story Time</a></div>
+            <div class="act" id="activity3"><a href="play-area.html">🎉 Play Area</a></div>
         </section>
 
-        <section class="gallery">
+        <section class="gal">
             <h2>Gallery</h2>
-            <div class="images">
+            <div class="imgs">
                 <img src="https://media.istockphoto.com/id/998670532/photo/childs-are-playing-with-play-clay-in-classroom.jpg?s=1024x1024&w=is&k=20&c=_Bj4SDMcVPF1tLiYgqy8Uezn6Ihcdueo1FwWxicDdO8=" alt="Activity 1">
                 <img src="https://media.istockphoto.com/id/1402700264/photo/teacher-with-a-group-of-elementary-students-playing-with-toy-blocks.jpg?s=1024x1024&w=is&k=20&c=jO7_LAqw7Yv6Jp8-Uehd-mfUuALc3HwBdOtCdNuoPTg=" alt="Activity 2">
                 <img src="https://media.istockphoto.com/id/1322307899/photo/sisters-playing-together-in-the-park.jpg?s=1024x1024&w=is&k=20&c=F15Ppyfs2MBtXLO0oUfgkvQLqtq03248xYLzton42ZA=" alt="Activity 3">
@@ -56,7 +61,7 @@
             </div>
         </section>
 
-        <section class="testimonials">
+        <section class="test">
             <h2>What Parents Say</h2>
             <blockquote>
                 <p>"My child loves going to this playschool. The staff is wonderful and the learning is fun!"</p>
@@ -68,7 +73,7 @@
             </blockquote>
         </section>
 
-        <section class="fun-facts">
+        <section class="ff">
             <h2>Fun Facts</h2>
             <ul>
                 <li>Our school has a garden where children learn about nature.</li>
@@ -78,7 +83,7 @@
             </ul>
         </section>
 
-        <section class="events">
+        <section class="ev">
             <h2>Upcoming Events</h2>
             <ul>
                 <li>Open House - March 15th</li>
@@ -116,12 +121,16 @@
                 </ul>
             </div>
         </div>
-        <div class="copyright">
+        <div class="cpy">
             <p>&copy; 2025 SHK GROUP LTD. All Rights Reserved. Learning is fun!</p>
         </div>
     </footer>
 
     <script>
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.querySelector(".n1").classList.toggle("active");
+        });
+
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.from(".hero", {
@@ -135,47 +144,47 @@
             }
         });
 
-        gsap.from(".video-section", {
+        gsap.from(".vd-sec", {
             opacity: 0,
             y: 50,
             duration: 1,
             scrollTrigger: {
-                trigger: ".video-section",
+                trigger: ".vd-sec",
                 start: "top 80%",
                 toggleActions: "play none none reverse"
             }
         });
 
-        gsap.from(".interactive-section", {
+        gsap.from(".int-sec", {
             opacity: 0,
             y: 50,
             duration: 1,
             scrollTrigger: {
-                trigger: ".interactive-section",
+                trigger: ".int-sec",
                 start: "top 80%",
                 toggleActions: "play none none reverse"
             }
         });
 
-        gsap.from(".gallery", {
+        gsap.from(".gal", {
             opacity: 0,
             y: 50,
             duration: 1,
             scrollTrigger: {
-                trigger: ".gallery",
+                trigger: ".gal",
                 start: "top 80%",
                 toggleActions: "play none none reverse"
             }
         });
 
-        const activities = document.querySelectorAll('.activity');
+        const acts = document.querySelectorAll('.act');
         
-        activities.forEach(activity => {
-            activity.addEventListener('mouseover', () => {
-                gsap.to(activity, { scale: 1.1, duration: 0.2 });
+        acts.forEach(act => {
+            act.addEventListener('mouseover', () => {
+                gsap.to(act, { scale: 1.1, duration: 0.2 });
             });
-            activity.addEventListener('mouseout', () => {
-                gsap.to(activity, { scale: 1, duration: 0.2 });
+            act.addEventListener('mouseout', () => {
+                gsap.to(act, { scale: 1, duration: 0.2 });
             });
         });
     </script>

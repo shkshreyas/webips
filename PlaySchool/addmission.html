@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission - Child FUN</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <section class="bar">
+            <nav class="n">
+                <div class="l">
+                    <img src="logo.jpg" alt="Logo">
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="n1">
+                    <a href="index.html">Home</a>
+                    <a href="addmission.html">Admission</a>
+                    <a href="#">Investors</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <main class="c">
+        <section class="hero">
+            <a href="addmission.html"><h1>Admissions Open!</h1></a>
+            <p>Join us for an amazing educational journey filled with creativity and fun!</p>
+        </section>
+
+        <section class="info">
+            <h2>How to Apply</h2>
+            <p>To enroll your child, please complete the online application form and submit the relevant documents.</p>
+        </section>
+
+        <section class="requirements">
+            <h2>Admission Requirements</h2>
+            <ul>
+                <li>Child must be at least 3 years old.</li>
+                <li>Completed application form.</li>
+                <li>Copy of the birth certificate.</li>
+                <li>Recent health check-up report.</li>
+                <li>Registration fee payment.</li>
+            </ul>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>What is the registration fee?</strong> The registration fee is Rs. 1 Lakhs.</p>
+            <p><strong>Are meals provided?</strong> Yes, nutritious meals are included in the tuition fee.</p>
+        </section>
+    </main>
+
+    <footer class="ft">
+        <div class="fc">
+            <div class="fs">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Invest</a></li>
+                </ul>
+            </div>
+            <div class="fs">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Admission</a></li>
+                </ul>
+            </div>
+            <div class="fs">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cpy">
+            <p>&copy; 2025 SHK GROUP LTD. All Rights Reserved. Learning is fun!</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.querySelector(".n1").classList.toggle("active");
+        });
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".hero", {
+            opacity: 0,
+            y: 50,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: ".hero",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    </script>
+</body>
+</html>
