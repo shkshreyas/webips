@@ -39,6 +39,32 @@ The repository is structured as follows:
 
 
 ---
+### **3. Car Website**
+- **Date:** 4 January 2025  
+- **Description:**  
+  A visually appealing and interactive website for car enthusiasts or dealerships, featuring:  
+  An extensive catalog of cars with images, prices, and specifications.
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="./Car/s1.png" alt="Car Image 1" style="width: 48%; height: auto;">
+  <img src="./Car/s2.png" alt="Car Image 2" style="width: 48%; height: auto;">
+</div>
+
+
+---
+### **4. Play School**
+- **Date:** 6 January 2025  
+- **Description:**  
+  A delightful and engaging website designed for a play school to attract and inform parents,
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img src="./PlaySchool/s1.png" alt="Car Image 1" style="width: 48%; height: auto;">
+  <img src="./PlaySchool/s2.png" alt="Car Image 2" style="width: 48%; height: auto;">
+</div>
+
+
+---
+
 
 ## **How to Use**
 
