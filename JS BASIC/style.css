@@ -1,0 +1,49 @@
+.c {
+    margin: 20px;
+    padding: 10px;
+}
+
+.b {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    transition: 0.3s;
+}
+.b:hover {
+    background: #2ecc71;
+    color: black;
+}
+
+.i {
+    width: 150px;
+    transition: 0.3s;
+}
+.i:hover {
+    transform: scale(1.1);
+}
+
+.t {
+    transition: 0.3s;
+}
+.t:hover {
+    font-size: 40px;
+}
+
+.bx {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #e74c3c;
+    transition: 0.3s;
+}
+.bx:hover {
+    border-color: #2980b9;
+}
+
+.p {
+    opacity: 1;
+    transition: 0.3s;
+}
+.p:hover {
+    opacity: 0.3;
+}
